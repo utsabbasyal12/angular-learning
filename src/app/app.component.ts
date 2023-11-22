@@ -7,6 +7,19 @@ import { TimeoutError } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent  implements OnInit, OnDestroy{
+
+  title ="Hello-World";
+  
+  a=0;
+  b=0;
+
+  getMin(a: number,b: number){
+    if(a<b){
+      return a;
+    }
+    return b;
+  }
+
   intervalSub: any;
   ngOnInit(): void {
     this.intervalSub = setInterval(() => {
