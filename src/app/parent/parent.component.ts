@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent {
 
+  recceiveMessage(msg: string){
+    alert (msg);
+  }
 }
