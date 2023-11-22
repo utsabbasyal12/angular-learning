@@ -8,16 +8,6 @@ import { TimeoutError } from 'rxjs';
 })
 export class AppComponent  implements OnInit, OnDestroy{
 
-//text interpolation
-  title ="Hello-World";
-
-  getMin(a: number,b: number){
-    if(a<b){
-      return a;
-    }
-    return b;
-  }
-
   //lifecycle hooks
 
   intervalSub: any;
@@ -33,5 +23,12 @@ export class AppComponent  implements OnInit, OnDestroy{
       clearInterval(this.intervalSub);
     }
   }
-}
+
+  showText = false;
+
+  toggleText(event: any): void
+{
+  this.showText = !this.showText;
+  console.log(event);
+}}
 
