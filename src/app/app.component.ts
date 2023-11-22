@@ -8,10 +8,8 @@ import { TimeoutError } from 'rxjs';
 })
 export class AppComponent  implements OnInit, OnDestroy{
 
+//text interpolation
   title ="Hello-World";
-  
-  a=0;
-  b=0;
 
   getMin(a: number,b: number){
     if(a<b){
@@ -20,7 +18,10 @@ export class AppComponent  implements OnInit, OnDestroy{
     return b;
   }
 
+  //lifecycle hooks
+
   intervalSub: any;
+  
   ngOnInit(): void {
     this.intervalSub = setInterval(() => {
       console.log('Hello from ngOnInit');
