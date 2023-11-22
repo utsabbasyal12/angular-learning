@@ -23,4 +23,6 @@ sendMessage() {
   this.messageEvent.emit('Hello from child');
 }
 
+message = 'message from child';
+
 }
