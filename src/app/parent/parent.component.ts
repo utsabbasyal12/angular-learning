@@ -1,4 +1,4 @@
-import { Component, ViewChild, AfterViewInit  } from '@angular/core';
+import { Component  } from '@angular/core';
 import { ChildComponent } from '../child/child.component';
 
 @Component({
@@ -8,15 +8,6 @@ import { ChildComponent } from '../child/child.component';
 })
 export class ParentComponent {
 
-  @ViewChild(ChildComponent) child:any;
-
   constructor(){}
 
-  ngAfterViewInit(){
-    alert(this.child.message);
-  }
-
-  recceiveMessage(msg: string){
-    alert (msg);
-  }
 }
