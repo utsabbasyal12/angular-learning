@@ -12,6 +12,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { EInfoComponent } from './e-info/e-info.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { WholesalerInfoComponent } from './wholesaler-info/wholesaler-info.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,13 +25,15 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
     DashboardComponent,
     EInfoComponent,
     ForgetPasswordComponent,
+    WholesalerInfoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

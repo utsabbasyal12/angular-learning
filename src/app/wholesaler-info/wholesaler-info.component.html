@@ -1,0 +1,38 @@
+<!-- app.component.html -->
+<div>
+  <h2>Wholesalers List</h2>
+  <table class="wholesalers-table">
+      <thead>
+          <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Email</th>
+              <th>Contact No</th>
+              <!-- Add more columns as needed -->
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let wholesaler of data">
+              <td>{{ wholesaler.wholesalerId }}</td>
+              <td>{{ wholesaler.name }}</td>
+              <td>{{ wholesaler.description }}</td>
+              <td>{{ wholesaler.email }}</td>
+              <td>{{ wholesaler.contactNo }}</td>
+              <!-- Add more cells as needed -->
+          </tr>
+      </tbody>
+  </table>
+
+  <!-- Add Wholesaler Form -->
+  <form #addWholesalerForm="ngForm" (submit)="addWholesaler(addWholesalerForm)">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="newWholesaler.name" name="name" required>
+    </div>
+    <!-- Add more form fields as needed -->
+
+    <button type="submit" class="btn btn-primary">Add Wholesaler</button>
+  </form>
+</div>
+
