@@ -14,6 +14,7 @@ import { EInfoComponent } from './e-info/e-info.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { WholesalerInfoComponent } from './wholesaler-info/wholesaler-info.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     EInfoComponent,
     ForgetPasswordComponent,
     WholesalerInfoComponent,
+    BreadcrumbComponent,
   ],
   imports: [
     BrowserModule,
